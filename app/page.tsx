@@ -11,11 +11,11 @@ export default function Landing() {
           <LargeHeading
             size='lg'
             className='three-d text-black dark:text-light-gold'>
-            Easily determine <br /> text similarity.
+            Easily analyze, <br />and manage.
           </LargeHeading>
 
           <Paragraph className='max-w-xl lg:text-left'>
-            Work your Model{' '}
+            your Models {' '}
             <Link
               href='/login'
               className='underline underline-offset-2 text-black dark:text-light-gold'>

@@ -6,7 +6,7 @@ import { body } from "@/app/data"
 export async function GET(req:NextRequest, context: {params:any}) {
     try {
         const ticker = context.params.ticker
-        const url = `/${ticker}?limit=${1}&apikey=${process.env.API_KEY}`
+        // const url = `/${ticker}?limit=${1}&apikey=${process.env.API_KEY}`
 
         // const income = await axios.get('/income-statement'+url)
         // const balance = await axios.get('/balance-sheet-statement'+url)
@@ -22,7 +22,7 @@ export async function GET(req:NextRequest, context: {params:any}) {
 
         const f = await dcf(body.data)
 
-        return NextResponse.json({dcf: f, infos: body})
+        return NextResponse.json({dcf: f, infos: body.data})
     } catch(e) {
         return NextResponse.json({error: e})
     }
